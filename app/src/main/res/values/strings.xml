@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">WhatsappDirect</string>
+    <string name="phone">Phone Number</string>
+    <string name="username">Enter your user name here.</string>
+</resources>
