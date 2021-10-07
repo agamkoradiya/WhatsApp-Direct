@@ -1,5 +1,6 @@
 package com.example.whatsappdirect;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
@@ -8,7 +9,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -27,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     final Context context = this;
     CountryCodePicker ccp;
-    EditText userPhoneNumber;
+    static EditText userPhoneNumber;
     EditText message;
     Button fastReplayOne;
 
@@ -43,6 +46,19 @@ public class MainActivity extends AppCompatActivity {
 
         checkAlertBox();
 
+
+
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable @org.jetbrains.annotations.Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Log.i("yst","ss");
+        if(resultCode==RESULT_OK){
+            Log.i("yst","ss");
+            userPhoneNumber.setText(data.getStringExtra("number"));
+        }
     }
 
     public void checkAlertBox(){
@@ -55,6 +71,11 @@ public class MainActivity extends AppCompatActivity {
         }else {
             setTextInButton();
         }
+    }
+
+    public static void setContactNumber(String ph){
+        userPhoneNumber.setText(ph);
+
     }
 
     public void makeAlertBox(){
@@ -191,5 +212,12 @@ public class MainActivity extends AppCompatActivity {
                             "https://api.whatsapp.com/send?phone=" + ccp.getFullNumberWithPlus() + "&text=What's going on?"
                     )));
         }
+    }
+
+
+    public void contactbtn(View view) {
+
+        Intent intent = new Intent(this,ContactActivity.class);
+        startActivity(intent);
     }
 }
