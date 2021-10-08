@@ -1,9 +1,5 @@
 # WhatsApp-Direct
-
-
-
-![Screenshot_20200424-204239](https://user-images.githubusercontent.com/54389203/80228162-4c205a00-866c-11ea-92e6-a823559280c3.png)
+![Screenshot_20211008-200835](https://user-images.githubusercontent.com/65078144/136576389-06019dd5-4b0c-4534-aa36-df7589307fad.jpg)
 
 # Apk File
-
-[Whatsapp Direct.zip](https://github.com/AnupKumarPanwar/ScratchView/files/4529783/Whatsapp.Direct.zip)
+[apk.zip](https://github.com/guru-dharshan/WhatsApp-Direct/files/7312123/apk.zip)
