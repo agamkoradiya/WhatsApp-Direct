@@ -4,6 +4,8 @@
     <string name="username">Enter your user name here.</string>
     <string name="message">Type Your Message</string>
     <string name="sendBTN">send</string>
+    <string name="contact">open contact</string>
+
     <string name="fastMessage">Quick Messages...</string>
     <string name="fastMessage_1">Hey</string>
     <string name="fastMessage_2">How are you?</string>

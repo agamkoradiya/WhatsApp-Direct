@@ -122,21 +122,44 @@
 
             </com.google.android.material.card.MaterialCardView>
 
-            <Button
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="15dp"
-                android:backgroundTint="#25d366"
-                android:drawableEnd="@drawable/ic_send_black_24dp"
-                android:onClick="sendbtn"
-                android:padding="10dp"
-                android:text="@string/sendBTN"
-                app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="fill_vertical"
+
+                    android:layout_marginTop="15dp"
+                    android:backgroundTint="#25d366"
+                    android:drawableEnd="@drawable/ic_baseline_contacts_24"
+                    android:onClick="contactbtn"
+                    android:padding="10dp"
+                    android:text="@string/contact"
+                    app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="fill_vertical"
+                    android:layout_marginTop="15dp"
+                    android:backgroundTint="#25d366"
+                    android:layout_marginStart="50dp"
+                    android:drawableEnd="@drawable/ic_send_black_24dp"
+                    android:onClick="sendbtn"
+                    android:padding="10dp"
+                    android:text="@string/sendBTN"
+                    app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                    />
+
+            </LinearLayout>
+
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
